@@ -9,7 +9,7 @@ def getHaysTranslation():
 	global debug
 	chapFiles = []
 	for d in range(12):
-		chapFiles.append('meds_hays%02d.html' % (d+1))
+		chapFiles.append('./source/meds_hays%02d.html' % (d+1))
 
 	# state variables as we process lines	
 	result = []
@@ -80,7 +80,7 @@ def getHaysTranslation():
 def getLongTranslation():
 	global debug
 
-	fp = open('meds_long.txt')
+	fp = open('./source/meditations.mb.txt')
 	lines = fp.readlines()
 	fp.close()
 	lines = map(lambda x: x.rstrip(), lines)
